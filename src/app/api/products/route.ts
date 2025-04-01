@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { getAllProducts as getApiProducts } from '@/services/productService';
 import mysql from 'mysql2/promise';
 
@@ -51,7 +51,7 @@ async function getAllProductsFromDB() {
   }
 }
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     // Try to get products from database first
     try {

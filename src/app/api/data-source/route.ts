@@ -1,8 +1,8 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import pool from '@/services/dbConfig';
 import { RowDataPacket } from 'mysql2';
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     // Check if we have products in the database
     const connection = await pool.getConnection();
