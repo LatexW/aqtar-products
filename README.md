@@ -69,7 +69,3 @@ If you want to pre-populate the database with sample products, use the "Reset Da
 - `/types`: TypeScript type definitions
 - `/api`: API routes
 - `/services`: Database and external API services
-
-## License
-
-This project is licensed under the MIT License.
