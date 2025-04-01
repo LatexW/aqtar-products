@@ -1,110 +1,77 @@
-# AQTAR Product Management
+# AQTAR Products Management System
 
-A modern web application for managing AQTAR's premium products. Built with Next.js, TypeScript, and a MySQL database.
+A modern product management application built with Next.js, TypeScript, and MySQL.
 
-![AQTAR Products](public/images/logo.png)
+![AQTAR Products App](public/images/logo.png)
 
 ## Features
 
-- Browse and filter products by category
-- Add, edit, and delete products
-- Image upload functionality
-- Integration with external product API
-- Responsive design for all devices
+- Browse and search products
+- Filter products by category
+- Add new products with image upload
+- Edit existing products
+- Delete products
+- Database integration with MySQL
+- API fallback for data retrieval
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 16+ and npm
+- MySQL Server
+- Git
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/NamoVize/aqtar.git
+   cd aqtar
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Set up the MySQL database:
+   - Create a database named `aqtar_products_db`
+   - The default connection settings are:
+     - Host: localhost
+     - User: root
+     - Password: (empty)
+     - Database: aqtar_products_db
+
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
+
+### Database Initialization
+
+The application will automatically create the necessary tables on first run. 
+If you want to pre-populate the database with sample products, use the "Reset Data" button on the homepage.
 
 ## Technology Stack
 
-- **Frontend:** Next.js 14, React, Tailwind CSS
-- **Backend:** Next.js API routes
-- **Database:** MySQL
-- **Language:** TypeScript
+- **Frontend**: Next.js, React, TypeScript, Tailwind CSS
+- **Backend**: Next.js API Routes
+- **Database**: MySQL
+- **Image Storage**: Local file system
 
-## Prerequisites
+## Project Structure
 
-- Node.js (v16 or higher)
-- MySQL server
-- npm or yarn
-
-## Setup and Installation
-
-1. **Clone the repository**
-
-   ```bash
-   git clone https://github.com/yourusername/aqtar-products.git
-   cd aqtar-products
-   ```
-
-2. **Install dependencies**
-
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-3. **Set up the database**
-
-   - Create a MySQL database named `aqtar_products_db`
-   - Create a table named `products` with the following schema:
-
-   ```sql
-   CREATE TABLE products (
-     id INT PRIMARY KEY,
-     title VARCHAR(255) NOT NULL,
-     price DECIMAL(10, 2) NOT NULL,
-     description TEXT,
-     category VARCHAR(100),
-     image VARCHAR(255),
-     rating_rate DECIMAL(3, 2),
-     rating_count INT
-   );
-   ```
-
-4. **Environment Variables**
-
-   Create a `.env.local` file in the root directory with the following content:
-
-   ```
-   DB_HOST=localhost
-   DB_USER=root
-   DB_PASSWORD=yourpassword
-   DB_NAME=aqtar_products_db
-   ```
-
-5. **Start the development server**
-
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-   The application will be available at `http://localhost:3000`.
-
-6. **Seed the database (optional)**
-
-   Visit `http://localhost:3000/api/seed` in your browser to populate the database with initial products.
-
-## Deployment
-
-1. **Build the application**
-
-   ```bash
-   npm run build
-   # or
-   yarn build
-   ```
-
-2. **Start the production server**
-
-   ```bash
-   npm start
-   # or
-   yarn start
-   ```
+- `/app`: Next.js 13+ App Router
+- `/components`: Reusable React components
+- `/public`: Static assets
+- `/utils`: Utility functions
+- `/types`: TypeScript type definitions
+- `/api`: API routes
+- `/services`: Database and external API services
 
 ## License
 
-This project is proprietary and confidential. Unauthorized copying, modification, distribution, or use of this software is strictly prohibited.
-
-© 2023 AQTAR. All rights reserved.
+This project is licensed under the MIT License.
