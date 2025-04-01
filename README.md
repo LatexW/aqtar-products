@@ -2,8 +2,6 @@
 
 A modern product management application built with Next.js, TypeScript, and MySQL.
 
-![AQTAR Products App](public/images/logo.png)
-
 ## Features
 
 - Browse and search products
@@ -26,8 +24,8 @@ A modern product management application built with Next.js, TypeScript, and MySQ
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/NamoVize/aqtar.git
-   cd aqtar
+   git clone https://github.com/LatexW/aqtar-products.git
+   cd aqtar-products
    ```
 
 2. Install dependencies:
